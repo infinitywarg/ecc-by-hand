@@ -2,13 +2,13 @@ use std::fmt::{Display, Result};
 
 fn main() {
     let f1 = Fp::new(9, 13);
-    let f2 = Fp::new(3, 13);
-    match f1.sub(&f2) {
+    let f2 = Fp::new(4, 13);
+    match f1.add(&f2) {
         None => {
             println!("error: different modulii cannot be added");
         }
         Some(f) => {
-            println!("{} - {} = {}", f1, f2, f);
+            println!("{} + {} = {}", f1, f2, f);
         }
     }
 }
